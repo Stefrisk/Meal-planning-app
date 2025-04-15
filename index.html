@@ -16,24 +16,21 @@
 
     <div class="mainheadercontainer">
 
-        <img src="assets/applogo.jpg" alt="NutriPlan Logo" class="logo" width="90" >
+        <img src="assets/applogo.jpg" alt="NutriPlan Logo" class="logo">
 
-        <div class="header-text-container" >
+        <div class="header-text-container">
             <h1 class="headertext">NutriPlan</h1>
-            <h2 class="headertext2">Easily plan your meals with nutrition in mind</h2>
+            <h2 class="headertext2">Effortless Meal Plans with Optimal Nutrition</h2>c
         </div>
     </div>
 
-    <div class="content1">
-        <div class="navbar">
+    <section class="content1">
+        <nav class="navbar">
             <button class="nav1">View my meal plan</button>
             <button class="nav2">New meal plan</button>
             <button class="nav3">My meals</button>
             <button class="nav4">My ingredients</button>
-
-
-
-        </div>
+        </nav>
 
         <div class="instructions">
             <h4 class="institle">How to use NutriPlan</h4>
@@ -48,29 +45,81 @@
             </ol>
 
         </div>
+    </section>
+
+
+    
+
+<section class="dayselectorcontainer">
+
+            <fieldset class="dayselectfieldset">
+                <label class="dayselectorheader">Click to highlight a day</label>
+                
+                <button class="dayofweek" value="Monday">Monday</button>
+                <button class="dayofweek" value="Tuesday">Tuesday</button>
+                <button class="dayofweek" value="Wednesday">Wednesday</button>
+                <button class="dayofweek" value="Thursday">Thursday</button>
+                <button class="dayofweek" value="Friday">Friday</button>
+                <button class="dayofweek" value="Saturday">Saturday</button>
+                <button class="dayofweek" value="Sunday">Sunday</button>
+            </fieldset>
+        
+            
+
+    <div class="currentdayselectedcontainer" >
+            <label class="dayselectedtitle">Creating a meal for: </label> <label type="button" class="currentdayselected" value=""> sampleday</label>
+        <div class="mealsindaylist">
+            <label class="mealsindayheader">Meals in this day</label>
+            <ol class="mealsindaylist" >
+                <li id="meal" value=""> pizza</li>
+                <li>öakjsdhfjk</li> 
+                <li>ölaisdfklöjs</li>
+
+            </ol>
+        </div>
+
     </div>
 
+</section>
 
-    <div class="mealbuilder">
-        <h3 class="mealbuilderheader">Build your meal</h3>
-        <select name="meal type" class="mealtype" aria-placeholder="Select your meal type">
-            <option value="Breakfast">Breakfast</option>
-            <option value="Lunch">Lunch</option>
-            <option value="Dinner">Dinner</option>
-            <option value="Snack01">Snack01</option>
-            <option value="Snack02">Snack02</option>
-            <option value="Snack03">Snack03</option>
-            <option value="Snack04">Snack04</option>
-        </select>
-        <search>
-            <form>
-                <input type="text" name="ingredientsearch" id="ingredientsearch" class="ingredientsearch" placeholder="enter ingredient name">
-            </form>
-        </search>
+    
+
+    <div class="mealbuildercontainer">
+
+        <section class="mealselect">
+
+            <label for="mealtype" class="mealtypeheader" aria-valuetext=""></label>
+            <select name="mealtype" class="mealtype" aria-placeholder="Select your meal type" width="200px">
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Snack01">Snack01</option>
+                <option value="Snack02">Snack02</option>
+                <option value="Snack03">Snack03</option>
+                <option value="Snack04">Snack04</option>
+            </select>
+        </section>
+
+        <section class="ingredients">
+            <search class="mealsearch">
+                <form>
+                    <label for="ingredientsearch">Search ingredients</label>
+                    <input type="text" name="ingredientsearch" id="ingredientsearch" class="ingredientsearch"
+                        placeholder="enter ingredient name">
+                    <button type="submit">Search</button>
+                </form>
+            </search>
+            <ol class="mealbuilderlist">
+                <label>Meal ingredients</label>
+                <li>potato</li>
+                <li>carrot</li>
+                <li>tomato</li>
+            </ol>
+            <button type="button" class="mealbuilderbutton">Add meal to day</button>
 
 
+        
     </div>
-
 
 </body>
 

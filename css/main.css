@@ -1,33 +1,61 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    padding: 2rem;
-    margin: 2rem;
-    
-    background-image: url('https://cdn.vox-cdn.com/thumbor/dW3P3MttdEHLG4ECQQvnhTlFQog=/0x0:1162x630/1220x813/filters:focal(417x201:601x385):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/60395473/food_emoji.0.jpg');
-    background-size:auto 100%;
-    background-repeat: repeat;
-    
-    
-   
-    
-}
-
-
+/* ==========================
+   Root Variables
+========================== */
 :root {
-    
     --background-color: rgb(236, 234, 212);
     --primary-color: rgba(1, 101, 201, 0.931);
     --secondary-color: rgba(254, 208, 152, 0.909);
     --text-color: rgb(37, 42, 52);
     --light-gray: rgb(109, 107, 107);
-    
-   
 }
 
-h1.headertext {
+/* ==========================
+   General Styles
+========================== */
+body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
+    padding: 2rem;
+    margin: 2rem;
+    background-image: url('https://cdn.vox-cdn.com/thumbor/dW3P3MttdEHLG4ECQQvnhTlFQog=/0x0:1162x630/1220x813/filters:focal(417x201:601x385):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/60395473/food_emoji.0.jpg');
+    background-size: auto 100%;
+    background-repeat: repeat;
+}
+
+/* ==========================
+   Utility Classes
+========================== */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.box-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.border-radius {
+    border-radius: 10px;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================
+   Header Styles
+========================== */
+h1.headertext {
     font-size: 6em;
     letter-spacing: 20px;
     text-align: left;
@@ -35,66 +63,52 @@ h1.headertext {
     text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5), 0 0 20px var(--secondary-color);
 }
 
-
-
- 
-
-
 h2.headertext2 {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    text-decoration-line: underline;
+    text-decoration: underline;
     font-style: oblique;
     letter-spacing: 2px;
     font-size: 2em;
     text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.464), 0 0 15px var(--primary-color);
-    
 }
-
-
-
-
-
 
 div.mainheadercontainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px; 
-    align-items: stretch; 
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+    align-items: stretch;
 }
+
 .logo {
     flex-grow: 2;
     border: 5px solid var(--secondary-color);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8), 0 0 20px var(--primary-color);
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
     padding: 20px;
-    background: linear-gradient( 137deg ,var(--primary-color), var(--secondary-color));
+    background: linear-gradient(137deg, var(--primary-color), var(--secondary-color));
     border-radius: 10px;
 }
+
 .header-text-container {
-    background: linear-gradient( 137deg ,var(--primary-color), var(--secondary-color));
+    background: linear-gradient(137deg, var(--primary-color), var(--secondary-color));
     flex-grow: 3;
-    height: auto;
-    margin: 10px; 
-    border-radius: 20px;
+    margin: 10px;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);   
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
+/* ==========================
+   Content Section
+========================== */
 .content1 {
     display: flex;
-    flex-direction: row;   
+    flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
 }
+
 .instructions {
     margin-left: 30px;
     flex-grow: 3;
@@ -103,71 +117,68 @@ div.mainheadercontainer {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.342);
     padding: 10px;
     margin-bottom: 20px;
-    height: auto;
 }
+
 .institle {
     font-size: 24px;
     font-weight: bold;
     color: var(--text-color);
     text-align: center;
     margin-bottom: 10px;
-    height: auto;
 }
+
+/* ==========================
+   Navbar
+========================== */
 .navbar {
     flex-grow: 1;
-    height: auto;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     align-items: stretch;
     padding: 20px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-
+    margin: 5px 0 20px;
 }
-.nav1{flex-grow: 1; height: auto;}
-.nav2{flex-grow: 1; height: auto;}
-.nav3{flex-grow: 1; height: auto;}
-.nav4{flex-grow: 1; height: auto;}
-.nav5{flex-grow: 1; height: auto;}
 
+.navbar button {
+    flex-grow: 1;
+    height: auto;
+}
 
-
-
-
-
-
+/* ==========================
+   Day Selector
+========================== */
 fieldset.dayselectfieldset {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     padding: 20px;
     background: linear-gradient(137deg, var(--primary-color), var(--secondary-color));
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-.dayselectorheader{
-    flex-grow: 1; 
-    margin-bottom: 20px; 
-    margin: top 2px;
+
+.dayselectorheader {
+    margin-bottom: 20px;
     text-decoration: underline;
     color: var(--secondary-color);
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 1.6em;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    
 }
+
 .dayoftheweek {
-    flex-grow: 3;  
-    padding: 10px; 
-    border: 1px solid var(--light-gray); 
+    flex-grow: 3;
+    padding: 10px;
+    border: 1px solid var(--light-gray);
     border-radius: 5px;
-    background-color: var(--background-color); 
+    background-color: var(--background-color);
 }
 
-
-
-
-div.mealsindaylist{
+/* ==========================
+   Meals in Day
+========================== */
+div.mealsindaylist {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -179,11 +190,25 @@ div.mealsindaylist{
     background-clip: border-box;
 }
 
+.mealsindayheader {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: large;
+}
 
+.mealsindaylist {
+    font-weight: bold;
+    padding: 10px 0 30px;
+    list-style-type: disc;
+    border-radius: 5px;
+    background-image: url('../assets/paper_texture.jpg');
+    background-size: contain;
+    background-clip: border-box;
+}
 
-
-
-
+/* ==========================
+   Current Day Selected
+========================== */
 div.currentdayselectedcontainer {
     display: flex;
     flex-direction: column;
@@ -194,85 +219,30 @@ div.currentdayselectedcontainer {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
 .dayselectedtitle {
-    flex-shrink: 1;
     text-decoration: underline;
     color: var(--secondary-color);
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 1.6em;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     margin-bottom: 5px;
-    margin: top 2px;
 }
+
 .currentdayselected {
-    flex-basis: 5%; 
     margin-bottom: 10px;
     text-transform: lowercase;
     font-style: italic;
     color: rgb(238, 255, 47);
     font-size: 2em;
+    font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-weight: bold; 
-    animation: popEffect 1s infinite alternate; 
+    animation: popEffect 1s infinite alternate;
 }
 
-@keyframes popEffect {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.03);
-    }
-}
-.mealsindayheader {
-    flex-shrink: 1;
-    text-decoration: underline;
-    font-weight: bolder;
-    font-size: large;
-    
-}
-.mealsindaylist {
-    flex-grow: 1;
-    font-weight: bolder;
-    padding-bottom: 30px;
-    list-style-type: disc;
-    border-radius: 5px;
-    align-items: center;
-    padding: 10px;
-    background-image: url('../assets/paper_texture.jpg');
-    background-size: contain;
-    background-clip: border-box;
-}
-
-
-
-
-
-section.dayselectorcontainer{
-    display: flex;
-    flex-direction: row;
-    float: left;
-     padding: 20px;
-    background: linear-gradient( 137deg ,var(--primary-color), var(--secondary-color));
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-.dayselectfieldset{
-    flex-shrink: 1;
-    margin: 10px;
-    padding: 15px;
-}
-.currentdayselectedcontainer{
-    flex-grow: 1;
-    margin: 10px;
-    padding: 15px;
-}
-
-
-
-
-
-
+/* ==========================
+   Buttons
+========================== */
 button {
     background-color: var(--secondary-color);
     border: 3px solid var(--text-color);
@@ -280,7 +250,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease, color0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
@@ -289,21 +259,14 @@ button:hover {
     border-color: var(--secondary-color);
 }
 
-.mealplanningcontainer{
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    padding: 20px;
-    background: linear-gradient( 137deg ,var(--primary-color), var(--secondary-color));
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-.dayselector{
-    flex-grow: 3;
-    margin: 10px;
-    padding: 20px;
-
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-
+/* ==========================
+   Animations
+========================== */
+@keyframes popEffect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.03);
+    }
 }
