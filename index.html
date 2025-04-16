@@ -101,14 +101,14 @@
         </section>
 
         <section class="ingredients">
-            <search class="mealsearch">
-                <form>
+            
+                <div class="ingredient search">
                     <label for="ingredientsearch">Search ingredients</label>
-                    <input type="text" name="ingredientsearch" id="ingredientsearch" class="ingredientsearch"
-                        placeholder="enter ingredient name">
-                    <button type="submit">Search</button>
-                </form>
-            </search>
+                    <input type="text" name="ingredientsearch" id="ingredientsearchinput" placeholder="enter ingredient name">
+                    <button type="submit" id="ingredientsearchbutton">Search</button>
+                </div>
+                <div id="searchresultscontainer"> </div>
+            
             <ol class="mealbuilderlist">
                 <label>Meal ingredients</label>
                 <li>potato</li>
