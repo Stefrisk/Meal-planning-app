@@ -1,9 +1,8 @@
 
 
 // api address for fetching list of food items
-const apiUrl = "https://dataportal.livsmedelsverket.se/livsmedel/api/v1/livsmedel?offset=0&limit=2532&sprak=2"; // Adjust the limit as needed - limit is amount of items per page";
-
-
+const apiUrl = "https://dataportal.livsmedelsverket.se/livsmedel/api/v1/livsmedel?offset=0&limit=2532&sprak=2"; // Adjust the limit as needed - limit is amount of items per pagedatabase entries is 2532
+const emptyapiURL = ""; // to use along side with item.links.0.href
 
 let db_fooditems = []; // Initialize an empty array to hold food items
 
@@ -41,8 +40,8 @@ function displayusersearchresults(results) {
         const itemLi = document.createElement("li"); // Create an <li> for each item
         itemLi.classList.add("food-item");
         itemLi.innerHTML = `
-        <h3>${item.Namn || "Unknown Name"}<span>, ID: </span>${item.Nummer || "Unknown ID"}</h3>
-        <p>Type: ${item.LivsmedelsTyp || "Unknown Type"}</p>
+        <h3>${item.namn || "Unknown Name"}<span>, ID: </span>${item.nummer || "Unknown ID"}</h3>
+        <p>Type: ${item.livsmedelsTyp || "Unknown Type"}</p>
         
         
         `;
@@ -53,11 +52,13 @@ function displayusersearchresults(results) {
 }
 
 
+
 function filterFoodItems(query) {
     return db_fooditems.filter(item =>
-        item.Namn && item.Namn.toLowerCase().includes(query.toLowerCase())
+        item.namn && item.namn.toLowerCase().includes(query.toLowerCase())
     );
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
     
