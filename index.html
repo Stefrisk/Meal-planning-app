@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\mainstyle.css">
+    <link rel="stylesheet" href="css\main.css">
+    
     <title>NutriPlan</title>
 </head>
 
@@ -35,7 +36,8 @@
         <div class="instructions">
             <h4 class="institle">How to use NutriPlan</h4>
             <ol>
-                <li>Select a day of the week</li>
+                <li>Select a day of the week obs! the weekday will stay highlighted, it is now the active day of the
+                    week on the page!</li>
                 <li>Create a new meal or search for a existing meal</li>
                 <li>Build your meal then customize the serving size of ingredients to your needs</li>
                 <li>Add meal to your chosen day ( OBS! 1-10 meals or snacks can be added per day!) </li>
@@ -48,79 +50,113 @@
     </section>
 
 
-    
 
-<section class="dayselectorcontainer">
 
-            <fieldset class="dayselectfieldset">
-                <label class="dayselectorheader">Click to highlight a day</label>
-                
-                <button class="dayofweek" value="Monday">Monday</button>
-                <button class="dayofweek" value="Tuesday">Tuesday</button>
-                <button class="dayofweek" value="Wednesday">Wednesday</button>
-                <button class="dayofweek" value="Thursday">Thursday</button>
-                <button class="dayofweek" value="Friday">Friday</button>
-                <button class="dayofweek" value="Saturday">Saturday</button>
-                <button class="dayofweek" value="Sunday">Sunday</button>
-            </fieldset>
-        
-            
+    <h3 class="dayselectorheader">Click to highlight a day</h3>
+    <div class="dayselectorcontainer">
 
-    <div class="currentdayselectedcontainer" >
-            <label class="dayselectedtitle">Creating a meal for: </label> <label type="button" class="currentdayselected" value=""> sampleday</label>
-        <div class="mealsindaylist">
-            <label class="mealsindayheader">Meals in this day</label>
-            <ol class="mealsindaylist" >
-                <li id="meal" value=""> pizza</li>
-                <li>öakjsdhfjk</li> 
-                <li>ölaisdfklöjs</li>
+        <fieldset class="dayselectfieldset">
 
-            </ol>
+            <div class="daysoftheweek">
+                <button class="dayofweek" value="Monday" onclick="setActiveDay('Monday')">Monday</button>
+                <button class="dayofweek" value="Tuesday" onclick="setActiveDay('Tuesday')">Tuesday</button>
+                <button class="dayofweek" value="Wednesday" onclick="setActiveDay('Wednesday')">Wednesday</button>
+                <button class="dayofweek" value="Thursday" onclick="setActiveDay('Thursday')">Thursday</button>
+                <button class="dayofweek" value="Friday" onclick="setActiveDay('Friday')">Friday</button>
+                <button class="dayofweek" value="Saturday" onclick="setActiveDay('Saturday')">Saturday</button>
+                <button class="dayofweek" value="Sunday" onclick="setActiveDay('Sunday')">Sunday</button>
+            </div>
+            <div class="daysofweeklistcontainer">
+                <ul id="Monday-meals" class="meals-list"></ul>
+                <ul id="Tuesday-meals" class="meals-list"></ul>
+                <ul id="Wednesday-meals" class="meals-list"></ul>
+                <ul id="Thursday-meals" class="meals-list"></ul>
+                <ul id="Friday-meals" class="meals-list"></ul>
+                <ul id="Saturday-meals" class="meals-list"></ul>
+                <ul id="Sunday-meals" class="meals-list"></ul>
+
+            </div>
+
+
+        </fieldset>
+    </div>
+
+    <div class="selectedingredientcontainer">
+        <h3 class="ingredientname"></h3>
+        <div class="nutritional-facts">
+            Kolhydrat: <span class="carbs">0</span> (Kcal: <span class="carbs-kcal">0</span>) |
+            Protein: <span class="protein">0</span> (Kcal: <span class="protein-kcal">0</span>) |
+            Fat: <span class="fat">0</span> (Kcal: <span class="fat-kcal">0</span>) |
+            Kcal enligt berikning: <span class="total-kcal-enrichment">0</span> |
+            Kcal enligt livsmedelsverket: <span class="total-kcal-livsmedelsverket">0</span>
         </div>
+
+
 
     </div>
 
-</section>
 
-    
+
 
     <div class="mealbuildercontainer">
 
-        <section class="mealselect">
 
-            <label for="mealtype" class="mealtypeheader" aria-valuetext=""></label>
-            <select name="mealtype" class="mealtype" aria-placeholder="Select your meal type" width="200px">
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
-                <option value="Snack01">Snack01</option>
-                <option value="Snack02">Snack02</option>
-                <option value="Snack03">Snack03</option>
-                <option value="Snack04">Snack04</option>
-            </select>
-        </section>
 
-        <section class="ingredients">
-            
-                <div class="ingredient search">
-                    <label for="ingredientsearch">Search ingredients</label>
-                    <input type="text" name="ingredientsearch" id="ingredientsearchinput" placeholder="enter ingredient name">
-                    <button type="submit" id="ingredientsearchbutton">Search</button>
-                </div>
-                <div id="searchresultscontainer"> </div>
-            
-            <ol class="mealbuilderlist">
-                <label>Meal ingredients</label>
-                <li>potato</li>
-                <li>carrot</li>
-                <li>tomato</li>
-            </ol>
+        <div class="mealrecipe">
+            <h2>Meal ingredients</h2> 
+            <h3 class="currentdayselected" text="No day selected" ></h3>
+
+            <ul class="mealingredients">
+                <li>
+                    <span class="ingredient-name">Butter</span>
+                    <input type="range" class="ingredient-slider" min="0" max="200" value="0" step="1">
+                    <span class="ingredient-weight">0g</span>
+
+                </li>
+
+            </ul>
+            <div class="mealbuilderoptions">
+
+                <label for="meal-name">Name:</label>
+                <input type="text" id="meal-name" name="meal-name" placeholder="Enter meal name" required>
+
+                <label for="meal-type">Type:</label><span>
+
+                </span>
+                <select id="meal-type" name="meal-type">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="snack1">Snack 1</option>
+                    <option value="snack2">Snack 2</option>
+                    <option value="snack3">Snack 3</option>
+                </select>
+
+            </div>
+
             <button type="button" class="mealbuilderbutton">Add meal to day</button>
 
+        </div>
 
-        
+        <section class="ingredientsearch">
+
+            
+                <label for="ingredientsearchinput">Search</label>
+                <input type="text" name="ingredientsearch" id="ingredientsearchinput" placeholder="Search for an ingredient" required>
+            
+            
+            <div id="search-results">
+                <!-- Search results will appear here -->
+            </div>
+
+        </section>
+
+
     </div>
 
+    <script src="js/foodapi.js"> </script>
+    <script src="js/app.js"> </script>
 </body>
 
 </html>

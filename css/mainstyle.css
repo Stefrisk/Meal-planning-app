@@ -184,7 +184,7 @@ div.mealsindaylist{
 
 
 
-div.currentdayselectedcontainer {
+div.currentdaysmeals {
     display: flex;
     flex-direction: column;
     text-align: center;
