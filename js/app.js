@@ -35,6 +35,7 @@ function addMealToActiveDay(meal) {
     }
 }
 
+
 const dayButtons = document.querySelectorAll('.dayofweek'); // Select all buttons with the class 'dayofweek'
 
 dayButtons.forEach(button => {

@@ -51,7 +51,7 @@ div.mainheadercontainer {
     flex-grow: 2;
     border: 0.3125rem solid var(--secondary-color);
     box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.8), 0 0 1.25rem var(--primary-color);
-    margin: 1.25rem;
+    
     margin-left: auto;
     padding: 1.25rem;
     background: linear-gradient(137deg, var(--primary-color), var(--secondary-color));
@@ -66,6 +66,9 @@ div.mainheadercontainer {
     border-radius: 1.25rem;
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
 }
+/* end of header styling section */
+
+
 
 /* Nav bar and instructions section */
 .content1 {
@@ -117,14 +120,30 @@ div.mainheadercontainer {
 .nav4 {
     flex-grow: 1;
 }
+/* end nav bar instructions section */
 
 
 
 
 
 
+/* start week planner */
+.dayselectorheader {
+    
+    font-size: 1.5rem;
+    
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+   
+    
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    border-radius: 5px;
+    border-color: var(--primary-color);
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.342);
+}
 
-/* Day selecetion box */
 
 div.dayselectorcontainer {
     display: flex;
@@ -179,101 +198,103 @@ div.dayselectorcontainer {
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.342);
     position: relative;
 }
+/* end of week planner */
 
 
-
-
+/* start of ingredient info*/
 .selectedingredientcontainer {
     padding: 1rem;
-    background: var(--background-color);
+    background: var(--secondary-color);
     border-radius: 10px;
     margin: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.3rem;
 }
 
-.mealslistcontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* end of ingredient info*/
 
-.mealsindaylist {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    width: 100%;
-}
-
-.mealsindaylist li {
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    background: var(--secondary-color);
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.mealsindaylist li:hover,
-.mealsindaylist li.selected {
-    background: var(--text-color);
-    color: var(--secondary-color);
-}
-
-.addmealbutton {
-    padding: 0.5rem 1rem;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.addmealbutton:hover {
-    background: var(--secondary-color);
-    color: var(--text-color);
-}
+/* start of meal builder */
 
 .mealbuildercontainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items:normal !important;
+    
+    margin: 0 0.5rem;
     padding: 1rem;
     background: var(--background-color);
     border-radius: 10px;
-    margin: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.mealrecipe,
 .ingredientsearch {
-    flex: 1;
-    margin: 0 1rem;
+    flex: 1 !important;
+    margin: 0 0.5rem;
     padding: 1rem;
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.mealingredients {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.mealingredients li {
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    background: var(--secondary-color);
-    border-radius: 5px;
-    text-align: center;
-}
-
-.ingredientdetails {
-    margin-top: 1rem;
+.mealbuilder-recipeandtype {
+    flex: 1 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch; 
+    
+    margin: 0 0.5rem;
     padding: 1rem;
-    background: var(--light-gray);
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mealrecipe {
+    flex: 3;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    
+}
+
+.mealbuilderoptions {
+    
+    flex-shrink: 1;
+    
+    display: flex;
+    flex-direction: row; 
+    margin: 0 0.5rem;
+    background: var(--primary-color);
+    color: white;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    
+}
+.mealoptionstext {
+    
+    
+    font-weight: bold;
+}
+
+.mealbuilderbutton:hover {
+    background: var(--secondary-color);
     color: var(--text-color);
 }
+
+.meal-type {
+    flex: 1;
+    margin: 0 0.5rem;
+    padding: 1rem;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* end of meal builder */

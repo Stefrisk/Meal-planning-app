@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\main.css">
-    
+
     <title>NutriPlan</title>
 </head>
 
 <body>
+
 
 
 
@@ -21,7 +22,7 @@
 
         <div class="header-text-container">
             <h1 class="headertext">NutriPlan</h1>
-            <h2 class="headertext2">Effortless Meal Plans with Optimal Nutrition</h2>c
+            <h2 class="headertext2">Effortless Meal Plans with Optimal Nutrition</h2>
         </div>
     </div>
 
@@ -83,12 +84,12 @@
 
     <div class="selectedingredientcontainer">
         <h3 class="ingredientname"></h3>
-        <div class="nutritional-facts">
-            Kolhydrat: <span class="carbs">0</span> (Kcal: <span class="carbs-kcal">0</span>) |
-            Protein: <span class="protein">0</span> (Kcal: <span class="protein-kcal">0</span>) |
-            Fat: <span class="fat">0</span> (Kcal: <span class="fat-kcal">0</span>) |
-            Kcal enligt berikning: <span class="total-kcal-enrichment">0</span> |
-            Kcal enligt livsmedelsverket: <span class="total-kcal-livsmedelsverket">0</span>
+        <div class="nutritional-facts" id="nutritional-facts">
+            Kolhydrat: <span id="carbs" class="carbs" >0</span> (Kcal: <span id="carbs-kcal" class="carbs-kcal">0</span>) |
+            Protein: <span id="protein" class="protein">0</span> (Kcal: <span id="protein-kcal" class="protein-kcal">0</span>) |
+            Fat: <span id="fat" class="fat">0</span> (Kcal: <span id="fat-kcal" class="fat-kcal">0</span>) 
+            <p>Kcal enligt berikning: <span id="total-kcal-enrichment" class="total-kcal-enrichment">0</span> | Kcal enligt livsmedelsverket: <span id="total-kcal-livsmedelsverket" class="total-kcal-livsmedelsverket">0</span></p>
+            
         </div>
 
 
@@ -102,25 +103,13 @@
 
 
 
-        <div class="mealrecipe">
-            <h2>Meal ingredients</h2> 
-            <h3 class="currentdayselected" text="No day selected" ></h3>
-
-            <ul class="mealingredients">
-                <li>
-                    <span class="ingredient-name">Butter</span>
-                    <input type="range" class="ingredient-slider" min="0" max="200" value="0" step="1">
-                    <span class="ingredient-weight">0g</span>
-
-                </li>
-
-            </ul>
+        <div class="mealbuilder-recipeandtype">
             <div class="mealbuilderoptions">
 
-                <label for="meal-name">Name:</label>
+                <label class="mealoptionstext" for="meal-name">Name:</label>
                 <input type="text" id="meal-name" name="meal-name" placeholder="Enter meal name" required>
 
-                <label for="meal-type">Type:</label><span>
+                <label class="mealoptionstext" for="meal-type">Type:</label><span>
 
                 </span>
                 <select id="meal-type" name="meal-type">
@@ -132,28 +121,51 @@
                     <option value="snack2">Snack 2</option>
                     <option value="snack3">Snack 3</option>
                 </select>
-
+                <button type="button" class="mealbuilderbutton">Add meal to day</button>
             </div>
 
-            <button type="button" class="mealbuilderbutton">Add meal to day</button>
+
+
+
+
+
+            <div class="mealrecipe">
+                <h2>Meal ingredients</h2>
+                <h3 class="currentdayselected" text="No day selected"></h3>
+                <div class="mealingredientscontainer"></div>
+                <ul class="mealingredients" id="mealingredients02">
+                    <!-- Ingredients will be added here dynamically -->
+
+                </ul>
+            </div>
 
         </div>
 
-        <section class="ingredientsearch">
+        <div class="ingredientsearch">
 
-            
+            <div class="ingredientsearchcontainer" >
                 <label for="ingredientsearchinput">Search</label>
-                <input type="text" name="ingredientsearch" id="ingredientsearchinput" placeholder="Search for an ingredient" required>
+                 <input type="text" name="ingredientsearch" id="ingredientsearchinput" placeholder="Search for an ingredient"
+                required>
             
-            
+                <button type="button" class="ingredientaddbutton">Add ingredient</button>
+
+
+            </div>
+                
+
             <div id="search-results">
                 <!-- Search results will appear here -->
             </div>
 
-        </section>
-
+        </div>
 
     </div>
+
+
+
+
+
 
     <script src="js/foodapi.js"> </script>
     <script src="js/app.js"> </script>
